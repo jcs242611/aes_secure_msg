@@ -120,7 +120,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+# .env, need to use this file in current assignment
 .venv
 env/
 venv/
