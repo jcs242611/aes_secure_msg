@@ -36,7 +36,7 @@ def send_msg(server_address):
 
 
 parser = argparse.ArgumentParser(
-    description='Sending encrypted messages using AES 256')
+    description='Sending encrypted messages using AES')
 parser.add_argument('server_ip', help='IP address of the server')
 parser.add_argument('server_port', type=int, help='Port number of the server')
 
