@@ -1,11 +1,13 @@
-import os
 import pickle
+import configparser
 import argparse
 import socket
 from helper import generate_key, setup_database, store_message, decrypt_data
 
-shared_password = os.getenv("SHARED_PASSWORD")
-shared_salt = os.getenv("SHARED_SALT")
+config = configparser.ConfigParser()
+config.read('config.ini')
+shared_password = config.get('security', 'SHARED_PASSWORD')
+shared_salt = config.get('security', 'SHARED_SALT')
 
 
 def receive_msg(server_address):
